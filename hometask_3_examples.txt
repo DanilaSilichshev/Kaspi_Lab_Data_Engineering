@@ -1,0 +1,56 @@
+Microsoft Windows [Version 10.0.19043.1288]
+(c) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+C:\Users\Данил>mysql
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 15
+Server version: 8.0.26 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> USE `hw_03`;
+Database changed
+mysql> SELECT ROW_NUMBER() OVER() AS `position_row`, `member_id`, DATE_FORMAT(`activity_date`, '%Y-%m') AS `act_year_month`, SUM(`number_of_wagers`) AS `number_of_wagers` FROM `revenue_analysis` GROUP BY  `member_id`, DATE_FORMAT(`activity_date`, '%Y-%m')ORDER BY `member_id`;
++--------------+-----------+----------------+------------------+
+| position_row | member_id | act_year_month | number_of_wagers |
++--------------+-----------+----------------+------------------+
+|            1 |      1001 | 2017-01        |                5 |
+|            2 |      1001 | 2017-05        |                1 |
+|            3 |      1001 | 2017-06        |                3 |
+|            4 |      1001 | 2017-09        |                3 |
+|            5 |      1001 | 2017-12        |                3 |
+|            6 |      1002 | 2017-03        |                3 |
+|            7 |      1002 | 2017-04        |                9 |
+|            8 |      1002 | 2017-08        |                1 |
+|            9 |      1002 | 2017-09        |                1 |
+|           10 |      1003 | 2017-06        |                2 |
+|           11 |      1003 | 2017-07        |                1 |
++--------------+-----------+----------------+------------------+
+11 rows in set (0.00 sec)
+
+mysql> SELECT DISTINCT `member_id`, DATE_FORMAT(`activity_date`, '%Y-%m') AS `act_year_month`, SUM(`number_of_wagers`) OVER (PARTITION BY `member_id`, DATE_FORMAT(`activity_date`, '%Y-%m')) AS `sum`,SUM(`number_of_wagers`) OVER () AS `sum_n_o_w` FROM `revenue_analysis` ORDER BY `member_id`;
++-----------+----------------+------+-----------+
+| member_id | act_year_month | sum  | sum_n_o_w |
++-----------+----------------+------+-----------+
+|      1001 | 2017-01        |    5 |        32 |
+|      1001 | 2017-05        |    1 |        32 |
+|      1001 | 2017-06        |    3 |        32 |
+|      1001 | 2017-09        |    3 |        32 |
+|      1001 | 2017-12        |    3 |        32 |
+|      1002 | 2017-03        |    3 |        32 |
+|      1002 | 2017-04        |    9 |        32 |
+|      1002 | 2017-08        |    1 |        32 |
+|      1002 | 2017-09        |    1 |        32 |
+|      1003 | 2017-06        |    2 |        32 |
+|      1003 | 2017-07        |    1 |        32 |
++-----------+----------------+------+-----------+
+11 rows in set (0.00 sec)
+
+mysql> exit;
+Bye
