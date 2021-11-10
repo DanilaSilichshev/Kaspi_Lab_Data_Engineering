@@ -1,0 +1,207 @@
+Microsoft Windows [Version 10.0.19043.1288]
+(c) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+C:\Users\Данил>mysql
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 53
+Server version: 8.0.26 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> USE `hw_03`;
+Database changed
+mysql> SELECT * FROM `activity_info`;
++-----------+---------------------+-------------------------+---------------+
+| member_id | calendar_year_month | member_lifecycle_status | lapsed_months |
++-----------+---------------------+-------------------------+---------------+
+|      1001 |              201501 | Lapsed                  |             1 |
+|      1001 |              201502 | Lapsed                  |             2 |
+|      1001 |              201503 | Lapsed                  |             3 |
+|      1001 |              201504 | Lapsed                  |             4 |
+|      1001 |              201505 | Lapsed                  |             5 |
+|      1001 |              201506 | Lapsed                  |             6 |
+|      1001 |              201507 | Lapsed                  |             7 |
+|      1001 |              201508 | Lapsed                  |             8 |
+|      1001 |              201509 | Lapsed                  |             9 |
+|      1001 |              201510 | Lapsed                  |            10 |
+|      1001 |              201511 | Lapsed                  |            11 |
+|      1001 |              201512 | Lapsed                  |            12 |
+|      1001 |              201601 | Lapsed                  |            13 |
+|      1001 |              201602 | Lapsed                  |            14 |
+|      1001 |              201603 | Lapsed                  |            15 |
+|      1001 |              201604 | Lapsed                  |            16 |
+|      1001 |              201605 | Lapsed                  |            17 |
+|      1001 |              201606 | Lapsed                  |            18 |
+|      1001 |              201607 | Lapsed                  |            19 |
+|      1001 |              201608 | Lapsed                  |            20 |
+|      1001 |              201609 | Lapsed                  |            21 |
+|      1001 |              201610 | Lapsed                  |            22 |
+|      1001 |              201611 | Lapsed                  |            23 |
+|      1001 |              201612 | Lapsed                  |            24 |
+|      1001 |              201701 | Active                  |             0 |
+|      1001 |              201702 | Lapsed                  |             1 |
+|      1001 |              201703 | Lapsed                  |             2 |
+|      1001 |              201704 | Lapsed                  |             3 |
+|      1001 |              201705 | Active                  |             0 |
+|      1001 |              201706 | Active                  |             0 |
+|      1001 |              201707 | Lapsed                  |             1 |
+|      1001 |              201708 | Lapsed                  |             2 |
+|      1001 |              201709 | Active                  |             0 |
+|      1001 |              201710 | Lapsed                  |             1 |
+|      1001 |              201711 | Lapsed                  |             2 |
+|      1001 |              201712 | Active                  |             0 |
+|      1001 |              201801 | Lapsed                  |             1 |
+|      1001 |              201802 | Lapsed                  |             2 |
+|      1001 |              201803 | Lapsed                  |             3 |
+|      1001 |              201804 | Lapsed                  |             4 |
+|      1001 |              201805 | Lapsed                  |             5 |
+|      1001 |              201806 | Lapsed                  |             6 |
+|      1001 |              201807 | Lapsed                  |             7 |
+|      1001 |              201808 | Lapsed                  |             8 |
+|      1001 |              201809 | Lapsed                  |             9 |
+|      1001 |              201810 | Lapsed                  |            10 |
+|      1001 |              201811 | Lapsed                  |            11 |
+|      1001 |              201812 | Lapsed                  |            12 |
+|      1001 |              201901 | Lapsed                  |            13 |
+|      1001 |              201902 | Lapsed                  |            14 |
+|      1001 |              201903 | Lapsed                  |            15 |
+|      1001 |              201904 | Lapsed                  |            16 |
+|      1001 |              201905 | Lapsed                  |            17 |
+|      1001 |              201906 | Lapsed                  |            18 |
+|      1001 |              201907 | Lapsed                  |            19 |
+|      1001 |              201908 | Lapsed                  |            20 |
+|      1001 |              201909 | Lapsed                  |            21 |
+|      1001 |              201910 | Lapsed                  |            22 |
+|      1001 |              201911 | Lapsed                  |            23 |
+|      1001 |              201912 | Lapsed                  |            24 |
+|      1002 |              201501 | Lapsed                  |             1 |
+|      1002 |              201502 | Lapsed                  |             2 |
+|      1002 |              201503 | Lapsed                  |             3 |
+|      1002 |              201504 | Lapsed                  |             4 |
+|      1002 |              201505 | Lapsed                  |             5 |
+|      1002 |              201506 | Lapsed                  |             6 |
+|      1002 |              201507 | Lapsed                  |             7 |
+|      1002 |              201508 | Lapsed                  |             8 |
+|      1002 |              201509 | Lapsed                  |             9 |
+|      1002 |              201510 | Lapsed                  |            10 |
+|      1002 |              201511 | Lapsed                  |            11 |
+|      1002 |              201512 | Lapsed                  |            12 |
+|      1002 |              201601 | Lapsed                  |            13 |
+|      1002 |              201602 | Lapsed                  |            14 |
+|      1002 |              201603 | Lapsed                  |            15 |
+|      1002 |              201604 | Lapsed                  |            16 |
+|      1002 |              201605 | Lapsed                  |            17 |
+|      1002 |              201606 | Lapsed                  |            18 |
+|      1002 |              201607 | Lapsed                  |            19 |
+|      1002 |              201608 | Lapsed                  |            20 |
+|      1002 |              201609 | Lapsed                  |            21 |
+|      1002 |              201610 | Lapsed                  |            22 |
+|      1002 |              201611 | Lapsed                  |            23 |
+|      1002 |              201612 | Lapsed                  |            24 |
+|      1002 |              201701 | Lapsed                  |            25 |
+|      1002 |              201702 | Lapsed                  |            26 |
+|      1002 |              201703 | Active                  |             0 |
+|      1002 |              201704 | Active                  |             0 |
+|      1002 |              201705 | Lapsed                  |             1 |
+|      1002 |              201706 | Lapsed                  |             2 |
+|      1002 |              201707 | Lapsed                  |             3 |
+|      1002 |              201708 | Active                  |             0 |
+|      1002 |              201709 | Active                  |             0 |
+|      1002 |              201710 | Lapsed                  |             1 |
+|      1002 |              201711 | Lapsed                  |             2 |
+|      1002 |              201712 | Lapsed                  |             3 |
+|      1002 |              201801 | Lapsed                  |             4 |
+|      1002 |              201802 | Lapsed                  |             5 |
+|      1002 |              201803 | Lapsed                  |             6 |
+|      1002 |              201804 | Lapsed                  |             7 |
+|      1002 |              201805 | Lapsed                  |             8 |
+|      1002 |              201806 | Lapsed                  |             9 |
+|      1002 |              201807 | Lapsed                  |            10 |
+|      1002 |              201808 | Lapsed                  |            11 |
+|      1002 |              201809 | Lapsed                  |            12 |
+|      1002 |              201810 | Lapsed                  |            13 |
+|      1002 |              201811 | Lapsed                  |            14 |
+|      1002 |              201812 | Lapsed                  |            15 |
+|      1002 |              201901 | Lapsed                  |            16 |
+|      1002 |              201902 | Lapsed                  |            17 |
+|      1002 |              201903 | Lapsed                  |            18 |
+|      1002 |              201904 | Lapsed                  |            19 |
+|      1002 |              201905 | Lapsed                  |            20 |
+|      1002 |              201906 | Lapsed                  |            21 |
+|      1002 |              201907 | Lapsed                  |            22 |
+|      1002 |              201908 | Lapsed                  |            23 |
+|      1002 |              201909 | Lapsed                  |            24 |
+|      1002 |              201910 | Lapsed                  |            25 |
+|      1002 |              201911 | Lapsed                  |            26 |
+|      1002 |              201912 | Lapsed                  |            27 |
+|      1003 |              201501 | Lapsed                  |             1 |
+|      1003 |              201502 | Lapsed                  |             2 |
+|      1003 |              201503 | Lapsed                  |             3 |
+|      1003 |              201504 | Lapsed                  |             4 |
+|      1003 |              201505 | Lapsed                  |             5 |
+|      1003 |              201506 | Lapsed                  |             6 |
+|      1003 |              201507 | Lapsed                  |             7 |
+|      1003 |              201508 | Lapsed                  |             8 |
+|      1003 |              201509 | Lapsed                  |             9 |
+|      1003 |              201510 | Lapsed                  |            10 |
+|      1003 |              201511 | Lapsed                  |            11 |
+|      1003 |              201512 | Lapsed                  |            12 |
+|      1003 |              201601 | Lapsed                  |            13 |
+|      1003 |              201602 | Lapsed                  |            14 |
+|      1003 |              201603 | Lapsed                  |            15 |
+|      1003 |              201604 | Lapsed                  |            16 |
+|      1003 |              201605 | Lapsed                  |            17 |
+|      1003 |              201606 | Lapsed                  |            18 |
+|      1003 |              201607 | Lapsed                  |            19 |
+|      1003 |              201608 | Lapsed                  |            20 |
+|      1003 |              201609 | Lapsed                  |            21 |
+|      1003 |              201610 | Lapsed                  |            22 |
+|      1003 |              201611 | Lapsed                  |            23 |
+|      1003 |              201612 | Lapsed                  |            24 |
+|      1003 |              201701 | Lapsed                  |            25 |
+|      1003 |              201702 | Lapsed                  |            26 |
+|      1003 |              201703 | Lapsed                  |            27 |
+|      1003 |              201704 | Lapsed                  |            28 |
+|      1003 |              201705 | Lapsed                  |            29 |
+|      1003 |              201706 | Active                  |             0 |
+|      1003 |              201707 | Active                  |             0 |
+|      1003 |              201708 | Lapsed                  |             1 |
+|      1003 |              201709 | Lapsed                  |             2 |
+|      1003 |              201710 | Lapsed                  |             3 |
+|      1003 |              201711 | Lapsed                  |             4 |
+|      1003 |              201712 | Lapsed                  |             5 |
+|      1003 |              201801 | Lapsed                  |             6 |
+|      1003 |              201802 | Lapsed                  |             7 |
+|      1003 |              201803 | Lapsed                  |             8 |
+|      1003 |              201804 | Lapsed                  |             9 |
+|      1003 |              201805 | Lapsed                  |            10 |
+|      1003 |              201806 | Lapsed                  |            11 |
+|      1003 |              201807 | Lapsed                  |            12 |
+|      1003 |              201808 | Lapsed                  |            13 |
+|      1003 |              201809 | Lapsed                  |            14 |
+|      1003 |              201810 | Lapsed                  |            15 |
+|      1003 |              201811 | Lapsed                  |            16 |
+|      1003 |              201812 | Lapsed                  |            17 |
+|      1003 |              201901 | Lapsed                  |            18 |
+|      1003 |              201902 | Lapsed                  |            19 |
+|      1003 |              201903 | Lapsed                  |            20 |
+|      1003 |              201904 | Lapsed                  |            21 |
+|      1003 |              201905 | Lapsed                  |            22 |
+|      1003 |              201906 | Lapsed                  |            23 |
+|      1003 |              201907 | Lapsed                  |            24 |
+|      1003 |              201908 | Lapsed                  |            25 |
+|      1003 |              201909 | Lapsed                  |            26 |
+|      1003 |              201910 | Lapsed                  |            27 |
+|      1003 |              201911 | Lapsed                  |            28 |
+|      1003 |              201912 | Lapsed                  |            29 |
++-----------+---------------------+-------------------------+---------------+
+180 rows in set (0.67 sec)
+
+mysql> exit;
+Bye
