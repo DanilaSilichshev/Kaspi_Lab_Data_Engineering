@@ -1,0 +1,429 @@
+Microsoft Windows [Version 10.0.19043.1288]
+(c) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+C:\Users\Данил>mysql
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 8.0.26 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> USE `public`;
+Database changed
+mysql> SELECT DISTINCT `coaches`.discipline AS `discipline`, `coaches`.noc AS `noc` FROM `coaches` INNER JOIN `teams` ON `coaches`.discipline = `teams`.discipline AND `coaches`.noc = `teams`.noc GROUP BY `discipline`, `noc`;
++-------------------+----------------------------+
+| discipline        | noc                        |
++-------------------+----------------------------+
+| Artistic Swimming | Australia                  |
+| Artistic Swimming | Austria                    |
+| Artistic Swimming | Belarus                    |
+| Artistic Swimming | Canada                     |
+| Artistic Swimming | People's Republic of China |
+| Artistic Swimming | Colombia                   |
+| Artistic Swimming | Egypt                      |
+| Artistic Swimming | France                     |
+| Artistic Swimming | Great Britain              |
+| Artistic Swimming | Greece                     |
+| Artistic Swimming | Israel                     |
+| Artistic Swimming | Italy                      |
+| Artistic Swimming | Japan                      |
+| Artistic Swimming | Kazakhstan                 |
+| Artistic Swimming | Liechtenstein              |
+| Artistic Swimming | Mexico                     |
+| Artistic Swimming | Netherlands                |
+| Artistic Swimming | ROC                        |
+| Artistic Swimming | Spain                      |
+| Artistic Swimming | Ukraine                    |
+| Artistic Swimming | United States of America   |
+| Baseball/Softball | Australia                  |
+| Baseball/Softball | Canada                     |
+| Baseball/Softball | Dominican Republic         |
+| Baseball/Softball | Israel                     |
+| Baseball/Softball | Italy                      |
+| Baseball/Softball | Japan                      |
+| Baseball/Softball | Mexico                     |
+| Baseball/Softball | Republic of Korea          |
+| Baseball/Softball | United States of America   |
+| Basketball        | Argentina                  |
+| Basketball        | Australia                  |
+| Basketball        | Belgium                    |
+| Basketball        | Canada                     |
+| Basketball        | People's Republic of China |
+| Basketball        | Czech Republic             |
+| Basketball        | France                     |
+| Basketball        | Germany                    |
+| Basketball        | Islamic Republic of Iran   |
+| Basketball        | Italy                      |
+| Basketball        | Japan                      |
+| Basketball        | Nigeria                    |
+| Basketball        | Puerto Rico                |
+| Basketball        | Republic of Korea          |
+| Basketball        | Serbia                     |
+| Basketball        | Slovenia                   |
+| Basketball        | Spain                      |
+| Basketball        | United States of America   |
+| Football          | Argentina                  |
+| Football          | Australia                  |
+| Football          | Brazil                     |
+| Football          | Canada                     |
+| Football          | Chile                      |
+| Football          | People's Republic of China |
+| Football          | CГ?te d'Ivoire             |
+| Football          | Egypt                      |
+| Football          | France                     |
+| Football          | Germany                    |
+| Football          | Great Britain              |
+| Football          | Honduras                   |
+| Football          | Japan                      |
+| Football          | Mexico                     |
+| Football          | Netherlands                |
+| Football          | New Zealand                |
+| Football          | Republic of Korea          |
+| Football          | Romania                    |
+| Football          | Saudi Arabia               |
+| Football          | South Africa               |
+| Football          | Spain                      |
+| Football          | Sweden                     |
+| Football          | United States of America   |
+| Football          | Zambia                     |
+| Handball          | Angola                     |
+| Handball          | Argentina                  |
+| Handball          | Bahrain                    |
+| Handball          | Brazil                     |
+| Handball          | Denmark                    |
+| Handball          | Egypt                      |
+| Handball          | France                     |
+| Handball          | Germany                    |
+| Handball          | Hungary                    |
+| Handball          | Japan                      |
+| Handball          | Montenegro                 |
+| Handball          | Netherlands                |
+| Handball          | Norway                     |
+| Handball          | Portugal                   |
+| Handball          | Republic of Korea          |
+| Handball          | ROC                        |
+| Handball          | Spain                      |
+| Handball          | Sweden                     |
+| Hockey            | Argentina                  |
+| Hockey            | Australia                  |
+| Hockey            | Belgium                    |
+| Hockey            | Canada                     |
+| Hockey            | People's Republic of China |
+| Hockey            | Germany                    |
+| Hockey            | Great Britain              |
+| Hockey            | India                      |
+| Hockey            | Ireland                    |
+| Hockey            | Japan                      |
+| Hockey            | Netherlands                |
+| Hockey            | New Zealand                |
+| Hockey            | South Africa               |
+| Hockey            | Spain                      |
+| Rugby Sevens      | Argentina                  |
+| Rugby Sevens      | Australia                  |
+| Rugby Sevens      | Brazil                     |
+| Rugby Sevens      | Canada                     |
+| Rugby Sevens      | People's Republic of China |
+| Rugby Sevens      | Fiji                       |
+| Rugby Sevens      | France                     |
+| Rugby Sevens      | Great Britain              |
+| Rugby Sevens      | Ireland                    |
+| Rugby Sevens      | Japan                      |
+| Rugby Sevens      | Kenya                      |
+| Rugby Sevens      | New Zealand                |
+| Rugby Sevens      | Republic of Korea          |
+| Rugby Sevens      | ROC                        |
+| Rugby Sevens      | South Africa               |
+| Rugby Sevens      | United States of America   |
+| Volleyball        | Argentina                  |
+| Volleyball        | Brazil                     |
+| Volleyball        | Canada                     |
+| Volleyball        | People's Republic of China |
+| Volleyball        | Dominican Republic         |
+| Volleyball        | France                     |
+| Volleyball        | Islamic Republic of Iran   |
+| Volleyball        | Italy                      |
+| Volleyball        | Japan                      |
+| Volleyball        | Kenya                      |
+| Volleyball        | Poland                     |
+| Volleyball        | Republic of Korea          |
+| Volleyball        | ROC                        |
+| Volleyball        | Serbia                     |
+| Volleyball        | Tunisia                    |
+| Volleyball        | Turkey                     |
+| Volleyball        | United States of America   |
+| Volleyball        | Venezuela                  |
+| Water Polo        | Australia                  |
+| Water Polo        | Canada                     |
+| Water Polo        | People's Republic of China |
+| Water Polo        | Croatia                    |
+| Water Polo        | Greece                     |
+| Water Polo        | Hungary                    |
+| Water Polo        | Italy                      |
+| Water Polo        | Japan                      |
+| Water Polo        | Kazakhstan                 |
+| Water Polo        | Montenegro                 |
+| Water Polo        | Netherlands                |
+| Water Polo        | ROC                        |
+| Water Polo        | Serbia                     |
+| Water Polo        | South Africa               |
+| Water Polo        | Spain                      |
+| Water Polo        | United States of America   |
++-------------------+----------------------------+
+154 rows in set (0.00 sec)
+
+mysql> SELECT DISTINCT `teams`.discipline AS `discipline`, `teams`.noc AS `noc` FROM `teams` WHERE EXISTS (SELECT * FROM `coaches` WHERE `coaches`.discipline = `teams`.discipline AND `coaches`.noc = `teams`.noc);
++-------------------+----------------------------+
+| discipline        | noc                        |
++-------------------+----------------------------+
+| Artistic Swimming | Australia                  |
+| Artistic Swimming | Austria                    |
+| Artistic Swimming | Belarus                    |
+| Artistic Swimming | Canada                     |
+| Artistic Swimming | People's Republic of China |
+| Artistic Swimming | Colombia                   |
+| Artistic Swimming | Egypt                      |
+| Artistic Swimming | France                     |
+| Artistic Swimming | Great Britain              |
+| Artistic Swimming | Greece                     |
+| Artistic Swimming | Israel                     |
+| Artistic Swimming | Italy                      |
+| Artistic Swimming | Japan                      |
+| Artistic Swimming | Kazakhstan                 |
+| Artistic Swimming | Liechtenstein              |
+| Artistic Swimming | Mexico                     |
+| Artistic Swimming | Netherlands                |
+| Artistic Swimming | ROC                        |
+| Artistic Swimming | Spain                      |
+| Artistic Swimming | Ukraine                    |
+| Artistic Swimming | United States of America   |
+| Baseball/Softball | Australia                  |
+| Baseball/Softball | Canada                     |
+| Baseball/Softball | Dominican Republic         |
+| Baseball/Softball | Israel                     |
+| Baseball/Softball | Italy                      |
+| Baseball/Softball | Japan                      |
+| Baseball/Softball | Mexico                     |
+| Baseball/Softball | Republic of Korea          |
+| Baseball/Softball | United States of America   |
+| Basketball        | Argentina                  |
+| Basketball        | Australia                  |
+| Basketball        | Belgium                    |
+| Basketball        | Canada                     |
+| Basketball        | People's Republic of China |
+| Basketball        | Czech Republic             |
+| Basketball        | France                     |
+| Basketball        | Germany                    |
+| Basketball        | Islamic Republic of Iran   |
+| Basketball        | Italy                      |
+| Basketball        | Japan                      |
+| Basketball        | Nigeria                    |
+| Basketball        | Puerto Rico                |
+| Basketball        | Republic of Korea          |
+| Basketball        | Serbia                     |
+| Basketball        | Slovenia                   |
+| Basketball        | Spain                      |
+| Basketball        | United States of America   |
+| Football          | Argentina                  |
+| Football          | Australia                  |
+| Football          | Brazil                     |
+| Football          | Canada                     |
+| Football          | Chile                      |
+| Football          | People's Republic of China |
+| Football          | CГ?te d'Ivoire             |
+| Football          | Egypt                      |
+| Football          | France                     |
+| Football          | Germany                    |
+| Football          | Great Britain              |
+| Football          | Honduras                   |
+| Football          | Japan                      |
+| Football          | Mexico                     |
+| Football          | Netherlands                |
+| Football          | New Zealand                |
+| Football          | Republic of Korea          |
+| Football          | Romania                    |
+| Football          | Saudi Arabia               |
+| Football          | South Africa               |
+| Football          | Spain                      |
+| Football          | Sweden                     |
+| Football          | United States of America   |
+| Football          | Zambia                     |
+| Handball          | Angola                     |
+| Handball          | Argentina                  |
+| Handball          | Bahrain                    |
+| Handball          | Brazil                     |
+| Handball          | Denmark                    |
+| Handball          | Egypt                      |
+| Handball          | France                     |
+| Handball          | Germany                    |
+| Handball          | Hungary                    |
+| Handball          | Japan                      |
+| Handball          | Montenegro                 |
+| Handball          | Netherlands                |
+| Handball          | Norway                     |
+| Handball          | Portugal                   |
+| Handball          | Republic of Korea          |
+| Handball          | ROC                        |
+| Handball          | Spain                      |
+| Handball          | Sweden                     |
+| Hockey            | Argentina                  |
+| Hockey            | Australia                  |
+| Hockey            | Belgium                    |
+| Hockey            | Canada                     |
+| Hockey            | People's Republic of China |
+| Hockey            | Germany                    |
+| Hockey            | Great Britain              |
+| Hockey            | India                      |
+| Hockey            | Ireland                    |
+| Hockey            | Japan                      |
+| Hockey            | Netherlands                |
+| Hockey            | New Zealand                |
+| Hockey            | South Africa               |
+| Hockey            | Spain                      |
+| Rugby Sevens      | Argentina                  |
+| Rugby Sevens      | Australia                  |
+| Rugby Sevens      | Brazil                     |
+| Rugby Sevens      | Canada                     |
+| Rugby Sevens      | People's Republic of China |
+| Rugby Sevens      | Fiji                       |
+| Rugby Sevens      | France                     |
+| Rugby Sevens      | Great Britain              |
+| Rugby Sevens      | Ireland                    |
+| Rugby Sevens      | Japan                      |
+| Rugby Sevens      | Kenya                      |
+| Rugby Sevens      | New Zealand                |
+| Rugby Sevens      | Republic of Korea          |
+| Rugby Sevens      | ROC                        |
+| Rugby Sevens      | South Africa               |
+| Rugby Sevens      | United States of America   |
+| Volleyball        | Argentina                  |
+| Volleyball        | Brazil                     |
+| Volleyball        | Canada                     |
+| Volleyball        | People's Republic of China |
+| Volleyball        | Dominican Republic         |
+| Volleyball        | France                     |
+| Volleyball        | Islamic Republic of Iran   |
+| Volleyball        | Italy                      |
+| Volleyball        | Japan                      |
+| Volleyball        | Kenya                      |
+| Volleyball        | Poland                     |
+| Volleyball        | Republic of Korea          |
+| Volleyball        | ROC                        |
+| Volleyball        | Serbia                     |
+| Volleyball        | Tunisia                    |
+| Volleyball        | Turkey                     |
+| Volleyball        | United States of America   |
+| Volleyball        | Venezuela                  |
+| Water Polo        | Australia                  |
+| Water Polo        | Canada                     |
+| Water Polo        | People's Republic of China |
+| Water Polo        | Croatia                    |
+| Water Polo        | Greece                     |
+| Water Polo        | Hungary                    |
+| Water Polo        | Italy                      |
+| Water Polo        | Japan                      |
+| Water Polo        | Kazakhstan                 |
+| Water Polo        | Montenegro                 |
+| Water Polo        | Netherlands                |
+| Water Polo        | ROC                        |
+| Water Polo        | Serbia                     |
+| Water Polo        | South Africa               |
+| Water Polo        | Spain                      |
+| Water Polo        | United States of America   |
++-------------------+----------------------------+
+154 rows in set (0.00 sec)
+
+mysql> EXPLAIN SELECT DISTINCT `coaches`.discipline AS `discipline`, `coaches`.noc AS `noc` FROM `coaches` INNER JOIN `teams` ON `coaches`.discipline = `teams`.discipline AND `coaches`.noc = `teams`.noc GROUP BY `discipline`, `noc`;
++----+-------------+---------+------------+------+---------------+------+---------+------+------+----------+--------------------------------------------+
+| id | select_type | table   | partitions | type | possible_keys | key  | key_len | ref  | rows | filtered | Extra                                      |
++----+-------------+---------+------------+------+---------------+------+---------+------+------+----------+--------------------------------------------+
+|  1 | SIMPLE      | coaches | NULL       | ALL  | NULL          | NULL | NULL    | NULL |  394 |   100.00 | Using temporary                            |
+|  1 | SIMPLE      | teams   | NULL       | ALL  | NULL          | NULL | NULL    | NULL |  743 |     1.00 | Using where; Using join buffer (hash join) |
++----+-------------+---------+------------+------+---------------+------+---------+------+------+----------+--------------------------------------------+
+2 rows in set, 1 warning (0.00 sec)
+
+mysql> EXPLAIN SELECT DISTINCT `teams`.discipline AS `discipline`, `teams`.noc AS `noc` FROM `teams` WHERE EXISTS (SELECT * FROM `coaches` WHERE `coaches`.discipline = `teams`.discipline AND `coaches`.noc = `teams`.noc);
++----+--------------+-------------+------------+------+---------------+------+---------+------+------+----------+--------------------------------------------+
+| id | select_type  | table       | partitions | type | possible_keys | key  | key_len | ref  | rows | filtered | Extra                                      |
++----+--------------+-------------+------------+------+---------------+------+---------+------+------+----------+--------------------------------------------+
+|  1 | SIMPLE       | <subquery2> | NULL       | ALL  | NULL          | NULL | NULL    | NULL | NULL |   100.00 | Using temporary                            |
+|  1 | SIMPLE       | teams       | NULL       | ALL  | NULL          | NULL | NULL    | NULL |  743 |     1.00 | Using where; Using join buffer (hash join) |
+|  2 | MATERIALIZED | coaches     | NULL       | ALL  | NULL          | NULL | NULL    | NULL |  394 |   100.00 | NULL                                       |
++----+--------------+-------------+------------+------+---------------+------+---------+------+------+----------+--------------------------------------------+
+3 rows in set, 3 warnings (0.00 sec)
+
+mysql> SELECT `coaches`.noc AS `noc`, GROUP_CONCAT(DISTINCT `entries_gender`.discipline," ") AS `discipline` FROM `entries_gender` INNER JOIN `coaches` ON `coaches`.discipline = `entries_gender`.discipline GROUP BY `coaches`.noc ORDER BY `coaches`.noc;
++----------------------------+---------------------------------------------------------------------------------------------------------------------+
+| noc                        | discipline                                                                                                          |
++----------------------------+---------------------------------------------------------------------------------------------------------------------+
+| Angola                     | Handball                                                                                                            |
+| Argentina                  | Artistic Swimming ,Basketball ,Football ,Handball ,Hockey ,Rugby Sevens ,Volleyball                                 |
+| Australia                  | Artistic Swimming ,Baseball/Softball ,Basketball ,Football ,Hockey ,Rugby Sevens ,Water Polo                        |
+| Austria                    | Artistic Swimming                                                                                                   |
+| Bahrain                    | Handball                                                                                                            |
+| Belarus                    | Artistic Swimming                                                                                                   |
+| Belgium                    | Basketball ,Hockey                                                                                                  |
+| Brazil                     | Football ,Handball ,Rugby Sevens ,Volleyball                                                                        |
+| Cambodia                   | Artistic Swimming                                                                                                   |
+| Canada                     | Artistic Swimming ,Baseball/Softball ,Basketball ,Football ,Hockey ,Rugby Sevens ,Volleyball ,Water Polo            |
+| Chile                      | Football                                                                                                            |
+| Colombia                   | Artistic Swimming                                                                                                   |
+| Croatia                    | Water Polo                                                                                                          |
+| Czech Republic             | Basketball                                                                                                          |
+| CГ?te d'Ivoire             | Football                                                                                                            |
+| Denmark                    | Handball                                                                                                            |
+| Dominican Republic         | Baseball/Softball ,Basketball ,Volleyball                                                                           |
+| Egypt                      | Artistic Swimming ,Football ,Handball                                                                               |
+| Fiji                       | Rugby Sevens                                                                                                        |
+| France                     | Artistic Swimming ,Basketball ,Football ,Handball ,Rugby Sevens ,Volleyball                                         |
+| Germany                    | Basketball ,Football ,Handball ,Hockey                                                                              |
+| Great Britain              | Artistic Swimming ,Football ,Hockey ,Rugby Sevens                                                                   |
+| Greece                     | Artistic Swimming ,Water Polo                                                                                       |
+| Honduras                   | Football                                                                                                            |
+| Hungary                    | Handball ,Water Polo                                                                                                |
+| India                      | Hockey                                                                                                              |
+| Ireland                    | Hockey ,Rugby Sevens                                                                                                |
+| Islamic Republic of Iran   | Basketball ,Volleyball                                                                                              |
+| Israel                     | Artistic Swimming ,Baseball/Softball                                                                                |
+| Italy                      | Artistic Swimming ,Baseball/Softball ,Basketball ,Volleyball ,Water Polo                                            |
+| Japan                      | Artistic Swimming ,Baseball/Softball ,Basketball ,Football ,Handball ,Hockey ,Rugby Sevens ,Volleyball ,Water Polo  |
+| Kazakhstan                 | Artistic Swimming ,Water Polo                                                                                       |
+| Kenya                      | Rugby Sevens ,Volleyball                                                                                            |
+| Liechtenstein              | Artistic Swimming                                                                                                   |
+| Mexico                     | Artistic Swimming ,Baseball/Softball ,Football                                                                      |
+| Montenegro                 | Handball ,Water Polo                                                                                                |
+| Netherlands                | Artistic Swimming ,Football ,Handball ,Hockey ,Water Polo                                                           |
+| New Zealand                | Football ,Hockey ,Rugby Sevens                                                                                      |
+| Nigeria                    | Basketball                                                                                                          |
+| Norway                     | Handball                                                                                                            |
+| People's Republic of China | Artistic Swimming ,Basketball ,Football ,Hockey ,Rugby Sevens ,Volleyball ,Water Polo                               |
+| Poland                     | Volleyball                                                                                                          |
+| Portugal                   | Handball                                                                                                            |
+| Puerto Rico                | Basketball                                                                                                          |
+| Republic of Korea          | Baseball/Softball ,Basketball ,Football ,Handball ,Rugby Sevens ,Volleyball                                         |
+| ROC                        | Artistic Swimming ,Handball ,Rugby Sevens ,Volleyball ,Water Polo                                                   |
+| Romania                    | Football                                                                                                            |
+| San Marino                 | Artistic Swimming                                                                                                   |
+| Saudi Arabia               | Football                                                                                                            |
+| Serbia                     | Artistic Swimming ,Basketball ,Volleyball ,Water Polo                                                               |
+| Slovakia                   | Artistic Swimming                                                                                                   |
+| Slovenia                   | Basketball                                                                                                          |
+| South Africa               | Football ,Hockey ,Rugby Sevens ,Water Polo                                                                          |
+| Spain                      | Artistic Swimming ,Basketball ,Football ,Handball ,Hockey ,Water Polo                                               |
+| Sweden                     | Football ,Handball                                                                                                  |
+| Tunisia                    | Volleyball                                                                                                          |
+| Turkey                     | Volleyball                                                                                                          |
+| Ukraine                    | Artistic Swimming                                                                                                   |
+| United States of America   | Artistic Swimming ,Baseball/Softball ,Basketball ,Football ,Rugby Sevens ,Volleyball ,Water Polo                    |
+| Venezuela                  | Basketball ,Volleyball                                                                                              |
+| Zambia                     | Football                                                                                                            |
++----------------------------+---------------------------------------------------------------------------------------------------------------------+
+61 rows in set (0.00 sec)
+
+mysql> exit;
+Bye
