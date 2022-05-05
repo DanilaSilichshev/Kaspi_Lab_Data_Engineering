@@ -1,0 +1,78 @@
+Microsoft Windows [Version 10.0.19043.1288]
+(c) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+C:\Users\Данил>mysql
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 69
+Server version: 8.0.26 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE DATABASE IF NOT EXISTS `kaspi`;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> USE `kaspi`;
+Database changed
+mysql> CREATE TABLE IF NOT EXISTS `HOME_01`(`subject` VARCHAR(30),`topic` VARCHAR(60), `class_date_time` DATETIME);
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> SHOW TABLES;
++-----------------+
+| Tables_in_kaspi |
++-----------------+
+| home_01         |
++-----------------+
+1 row in set (0.01 sec)
+
+mysql> SELECT * FROM `HOME_01`;
+Empty set (0.00 sec)
+
+mysql> INSERT INTO `HOME_01` VALUES ('sql', 'sql basics', '2021-09-20 11:34:00'),('python', 'mutable data types', '2021-10-28 19:04:00'), ('vizualization', 'visualization tools', '2021-12-24 21:21:00');
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO `HOME_01` (`subject`, `topic`) VALUES ('python','pandas'), ('sql', 'views');
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM `HOME_01`;
++---------------+---------------------+---------------------+
+| subject       | topic               | class_date_time     |
++---------------+---------------------+---------------------+
+| sql           | sql basics          | 2021-09-20 11:34:00 |
+| python        | mutable data types  | 2021-10-28 19:04:00 |
+| vizualization | visualization tools | 2021-12-24 21:21:00 |
+| python        | pandas              | NULL                |
+| sql           | views               | NULL                |
++---------------+---------------------+---------------------+
+5 rows in set (0.00 sec)
+
+mysql> INSERT INTO `HOME_01` SELECT * FROM `HOME_01`;
+Query OK, 5 rows affected (0.01 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM `HOME_01`;
++---------------+---------------------+---------------------+
+| subject       | topic               | class_date_time     |
++---------------+---------------------+---------------------+
+| sql           | sql basics          | 2021-09-20 11:34:00 |
+| python        | mutable data types  | 2021-10-28 19:04:00 |
+| vizualization | visualization tools | 2021-12-24 21:21:00 |
+| python        | pandas              | NULL                |
+| sql           | views               | NULL                |
+| sql           | sql basics          | 2021-09-20 11:34:00 |
+| python        | mutable data types  | 2021-10-28 19:04:00 |
+| vizualization | visualization tools | 2021-12-24 21:21:00 |
+| python        | pandas              | NULL                |
+| sql           | views               | NULL                |
++---------------+---------------------+---------------------+
+10 rows in set (0.00 sec)
+
+mysql> exit;
+Bye
